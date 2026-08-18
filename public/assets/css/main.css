@@ -275,6 +275,3 @@ footer.site{background:var(--chalk-2); border-top:1px solid var(--rule); padding
 .stickybar .btn{margin-left:auto; padding:.75rem 1.1rem; font-size:.68rem}
 @media (max-width:960px){.stickybar{display:flex}}
 
-
-/* the "Make it yours" tab — the one nav item that is an offer, not a section */
-nav.main a.nav-yours{color:var(--gold, #C9A227)}

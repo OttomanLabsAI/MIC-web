@@ -256,6 +256,3 @@ footer.site{background:var(--ink-2); border-top:1px solid var(--line); padding:2
 .titleblock a{color:var(--gold-lt); text-decoration:none}
 .titleblock a:hover{text-decoration:underline}
 .foot-note{margin-top:1.2rem; font-family:var(--mono); font-size:.66rem; letter-spacing:.1em; color:var(--text-dim); display:flex; flex-wrap:wrap; gap:1.2rem; justify-content:space-between}
-
-/* the "Make it yours" tab — the one nav item that is an offer, not a section */
-nav.main a.nav-yours{color:var(--gold, #C9A227)}
