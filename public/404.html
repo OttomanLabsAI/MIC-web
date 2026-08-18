@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Off the map — Muslims In Construction</title>
+<meta name="robots" content="noindex">
+
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+/* 404-specific layout on top of the site stylesheet */
+.err{position:relative; overflow:hidden; min-height:calc(100svh - var(--hdr)); display:flex; align-items:center}
+.err-bg{position:absolute; inset:0; z-index:0; pointer-events:none;
+  mask-image:linear-gradient(to bottom, #000 25%, rgba(0,0,0,.25) 100%);
+  -webkit-mask-image:linear-gradient(to bottom, #000 25%, rgba(0,0,0,.25) 100%)}
+.err-bg svg{width:120%; height:100%; position:absolute; top:-10%; right:-25%}
+.err .wrap{position:relative; z-index:2; padding:clamp(3rem,8vw,6rem) 0}
+.err h1{font-family:var(--display); font-weight:800; text-transform:uppercase;
+  font-size:clamp(3.4rem, 12vw, 8.5rem); line-height:.84; letter-spacing:.005em; margin:0 0 1.2rem}
+.err h1 em{font-style:normal; color:var(--box); display:block}
+.err .lede{margin:0 0 2rem}
+@media (max-width:600px){.err-cta{display:none}}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">Muslims In <span>Construction</span></a>
+    <a class="btn btn--solid hdr-cta err-cta" href="/" style="margin-left:auto">Back to the trek</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="err">
+    <div class="err-bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 660" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <circle class="ct" cx="640" cy="330" r="420"/>
+        <circle class="ct" cx="620" cy="345" r="330"/>
+        <circle class="ct ct--key" cx="600" cy="360" r="245"/>
+        <circle class="ct" cx="585" cy="372" r="170"/>
+        <circle class="ct" cx="572" cy="382" r="104"/>
+        <circle class="ct ct--key" cx="562" cy="390" r="52"/>
+      </svg>
+    </div>
+    <div class="wrap">
+      <p class="eyebrow">Grid reference not found</p>
+      <h1>Off<em>the map</em></h1>
+      <p class="lede">This path is not on the survey. The trek, the route and everything you need for the day are back at the start.</p>
+      <div class="hero-actions">
+        <a class="btn btn--solid" href="/">Back to the trek</a>
+      </div>
+      <p class="dim" style="font-family:var(--mono); font-size:.72rem; letter-spacing:.1em; margin-top:2rem">404 — PAGE NOT FOUND</p>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
