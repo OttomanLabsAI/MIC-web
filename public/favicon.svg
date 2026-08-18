@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Contour rings of Box Hill: chalk tile, box-green lines, one ochre key contour -->
-  <rect width="64" height="64" rx="14" fill="#E9EAE3"/>
-  <circle cx="34" cy="30" r="22.5" fill="none" stroke="#2C5F4A" stroke-width="4"/>
-  <circle cx="31" cy="32.5" r="14.5" fill="none" stroke="#A8781E" stroke-width="4"/>
-  <circle cx="28.5" cy="35" r="7" fill="none" stroke="#2C5F4A" stroke-width="4"/>
+  <!-- The eight-point khatam from the homepage plate: guide circle,
+       then the two squares that set out the star. -->
+  <rect width="64" height="64" rx="14" fill="#071410"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="#47A87C" stroke-width="1.5" opacity=".55"/>
+  <rect x="15.7" y="15.7" width="32.6" height="32.6" fill="none" stroke="#C9A227" stroke-width="3"/>
+  <path d="M32 9 L55 32 L32 55 L9 32 Z" fill="none" stroke="#C9A227" stroke-width="3"/>
 </svg>
