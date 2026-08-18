@@ -30,3 +30,6 @@
 
 /gala/
   Cache-Control: public, max-age=0, must-revalidate
+
+/trek/
+  Cache-Control: public, max-age=0, must-revalidate

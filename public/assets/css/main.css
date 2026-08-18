@@ -275,15 +275,3 @@ footer.site{background:var(--chalk-2); border-top:1px solid var(--rule); padding
 .stickybar .btn{margin-left:auto; padding:.75rem 1.1rem; font-size:.68rem}
 @media (max-width:960px){.stickybar{display:flex}}
 
-/* ---------- future events (homepage strip; leaflet links to the event) ---------- */
-.evsplit{align-items:center}
-.evleaflet{display:block; max-width:400px; border:1px solid var(--rule); background:var(--chalk-2);
-  padding:1rem; transition:transform .18s ease, box-shadow .18s ease}
-.evleaflet:hover{transform:translateY(-4px); box-shadow:0 16px 34px rgba(23,33,28,.16)}
-.evleaflet img{border:1px solid var(--rule); width:100%; height:auto}
-.evk{font-family:var(--mono); font-size:.66rem; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--ochre); margin:0 0 .6rem}
-.evtitle{font-family:var(--display); font-weight:800; text-transform:uppercase;
-  font-size:clamp(1.8rem,3.6vw,2.6rem); line-height:.95; letter-spacing:.005em; margin:0 0 .8rem}
-.evsub{color:var(--flint); max-width:52ch; margin:0 0 1.6rem}
-@media (max-width:860px){.evleaflet{max-width:340px}}
