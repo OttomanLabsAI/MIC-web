@@ -81,7 +81,7 @@ header.site{
   position:sticky; top:0; z-index:50; height:var(--hdr); display:flex; align-items:center;
   background:rgba(233,234,227,.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--rule);
 }
-.site .wrap{display:flex; align-items:center; gap:1.5rem; width:min(100% - 2rem, var(--wrap))}
+header.site .wrap{display:flex; align-items:center; gap:1.5rem; width:min(100% - 2rem, var(--wrap))}
 .brand{font-family:var(--mono); font-size:.74rem; font-weight:700; letter-spacing:.18em;
   text-transform:uppercase; text-decoration:none; white-space:nowrap}
 .brand span{color:var(--box)}
@@ -260,7 +260,7 @@ footer.site{background:var(--chalk-2); border-top:1px solid var(--rule); padding
 .titleblock div:last-child{border-right:0}
 .titleblock .k{font-family:var(--mono); font-size:.58rem; letter-spacing:.2em; text-transform:uppercase;
   color:var(--flint); display:block; margin-bottom:.35rem}
-.titleblock .v{font-size:.9rem; font-weight:500}
+.titleblock .v{font-size:.9rem; font-weight:500; overflow-wrap:anywhere}
 .titleblock a{color:var(--box); text-decoration:none}
 .titleblock a:hover{text-decoration:underline}
 .foot-note{margin-top:1.2rem; font-family:var(--mono); font-size:.66rem; letter-spacing:.1em;
@@ -275,3 +275,6 @@ footer.site{background:var(--chalk-2); border-top:1px solid var(--rule); padding
 .stickybar .btn{margin-left:auto; padding:.75rem 1.1rem; font-size:.68rem}
 @media (max-width:960px){.stickybar{display:flex}}
 
+
+/* the "Make it yours" tab — the one nav item that is an offer, not a section */
+nav.main a.nav-yours{color:var(--gold, #C9A227)}

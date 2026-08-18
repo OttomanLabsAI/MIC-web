@@ -113,7 +113,7 @@ header.site{
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
-.site .wrap{display:flex; align-items:center; gap:1.5rem; width:min(100% - 2rem, var(--wrap))}
+header.site .wrap{display:flex; align-items:center; gap:1.5rem; width:min(100% - 2rem, var(--wrap))}
 .brand{
   font-family:var(--mono); font-size:.74rem; font-weight:700;
   letter-spacing:.18em; text-transform:uppercase;
@@ -371,7 +371,7 @@ footer.site{background:var(--ink-2); border-top:1px solid var(--line); padding:2
 .titleblock div{padding:1rem 1.1rem; border-right:1px solid var(--line); border-bottom:1px solid var(--line)}
 .titleblock div:last-child{border-right:0}
 .titleblock .k{font-family:var(--mono); font-size:.58rem; letter-spacing:.2em; text-transform:uppercase; color:var(--text-dim); display:block; margin-bottom:.35rem}
-.titleblock .v{font-size:.9rem; font-weight:500}
+.titleblock .v{font-size:.9rem; font-weight:500; overflow-wrap:anywhere}
 .titleblock a{color:var(--gold-lt); text-decoration:none}
 .titleblock a:hover{text-decoration:underline}
 .foot-note{margin-top:1.2rem; font-family:var(--mono); font-size:.66rem; letter-spacing:.1em; color:var(--text-dim); display:flex; flex-wrap:wrap; gap:1.2rem; justify-content:space-between}
@@ -387,3 +387,6 @@ footer.site{background:var(--ink-2); border-top:1px solid var(--line); padding:2
 .stickybar .info{font-family:var(--mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-dim); line-height:1.4}
 .stickybar .btn{margin-left:auto; padding:.75rem 1.1rem; font-size:.68rem}
 @media (max-width:900px){.stickybar{display:flex}}
+
+/* the "Make it yours" tab — the one nav item that is an offer, not a section */
+nav.main a.nav-yours{color:var(--gold, #C9A227)}
