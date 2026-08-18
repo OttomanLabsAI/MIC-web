@@ -11,8 +11,11 @@ Cloudflare Workers Builds, **every push to `main` deploys to production**.
 
 ```
 public/            everything served
-  index.html       the next event (Box Hill Trek) + future-events strip
-  gala/            the MIC Gala 2026 page with its leaflet PDF + image
+  index.html       the MIC homepage (concept) — sells the organisation,
+                   events boxed at the top, each box opening its page
+  trek/            the Box Hill Trek page, as supplied
+  gala/            the MIC Gala 2026 page (setting-out / star design)
+                   with its leaflet PDF + image
   404.html
   assets/css|js
   _headers         security + caching headers
@@ -21,10 +24,9 @@ wrangler.jsonc     assets-only config, no Worker script
 package.json       wrangler devDependency + dev/deploy scripts
 ```
 
-The homepage always carries the next event; other events live at their own
-paths and are linked from the homepage's "Future events" strip, where the
-event's leaflet image is the link. When an event passes, rotate: the next
-event takes the homepage and the strip points onward.
+The homepage sells MIC itself and lists the events in boxes at the top.
+Event pages live at their own paths. When an event passes, retire its box
+and add the next event's.
 
 ## Local development
 
@@ -36,8 +38,9 @@ npm run dev          # wrangler dev
 ## Verification - before every push to main
 
 1. `npx wrangler deploy --dry-run`
-2. Serve `public/`, render `/`, `/gala/` and the 404 with headless Chromium,
-   and inspect the screenshots: styles applied, fonts loaded, layout intact.
+2. Serve `public/`, render `/`, `/trek/`, `/gala/` and the 404 with headless
+   Chromium, and inspect the screenshots: styles applied, fonts loaded,
+   layout intact.
 
 Never leave pushed work unverified or half-finished. Work in small, complete
 batches: implement, verify, commit, push.
@@ -81,3 +84,4 @@ detail they flag.
 | Version | Title | Description |
 | --- | --- | --- |
 | v1.0 | The events site moves into its own home | The Muslims In Construction events site now lives in its own repository: the Box Hill trek fronts the door as the next event on the calendar, the gala stands at its own address, and the gala's leaflet on the homepage is the way through. Connect the repository to Cloudflare and every release from here publishes itself. |
+| v1.1 | The front door now sells the whole idea | The site opens on Muslims In Construction itself — the eight-point star drawn from its construction lines, what the network is, and both events in boxes at the top that open straight onto their pages. The trek moves to its own address, and the gala returns in the drawn, setting-out design. All of it a concept for review. |
