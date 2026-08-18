@@ -1,45 +1,30 @@
-/* ---- CONFIG: edit these three lines, nothing else ------------- */
-const PRICE_RISE = new Date('2026-10-01T00:00:00+01:00');  // standard → final release
-const EVENT_DATE = new Date('2026-11-28T18:00:00+00:00');
-/* -------------------------------------------------------------- */
-
-// Countdown to the next price rise. Hides itself once the date passes,
-// so the page never advertises an offer that has already expired.
 (function(){
-  const box = document.getElementById('countdown');
-  const val = document.getElementById('cd-val');
+  var target = Date.UTC(2026, 10, 28, 18, 0, 0); // 28 Nov 2026, 18:00 GMT
+  var d = document.getElementById('cd-d'),
+      h = document.getElementById('cd-h'),
+      m = document.getElementById('cd-m'),
+      s = document.getElementById('cd-s'),
+      mini = document.getElementById('cd-mini');
+
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+
   function tick(){
-    const ms = PRICE_RISE - Date.now();
-    if(ms <= 0 || Date.now() > EVENT_DATE){ box.hidden = true; return; }
-    box.hidden = false;
-    const d = Math.floor(ms/864e5), h = Math.floor(ms/36e5)%24, m = Math.floor(ms/6e4)%60;
-    val.textContent = d + 'd ' + String(h).padStart(2,'0') + 'h ' + String(m).padStart(2,'0') + 'm';
+    var diff = target - Date.now();
+    if (diff <= 0){
+      d.textContent = h.textContent = m.textContent = s.textContent = '00';
+      if (mini) mini.textContent = 'Tonight';
+      return;
+    }
+    var days = Math.floor(diff / 86400000),
+        hrs  = Math.floor(diff / 3600000) % 24,
+        mins = Math.floor(diff / 60000) % 60,
+        secs = Math.floor(diff / 1000) % 60;
+    d.textContent = days;
+    h.textContent = pad(hrs);
+    m.textContent = pad(mins);
+    s.textContent = pad(secs);
+    if (mini) mini.textContent = days + ' days to go';
   }
-  tick(); setInterval(tick, 30000);
+  tick();
+  setInterval(tick, 1000);
 })();
-
-// Scroll reveal
-(function(){
-  const items = document.querySelectorAll('.rv');
-  if(!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches){
-    items.forEach(el => el.classList.add('in')); return;
-  }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if(e.isIntersecting){
-        setTimeout(() => e.target.classList.add('in'), i * 45);
-        io.unobserve(e.target);
-      }
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
-  items.forEach(el => io.observe(el));
-})();
-
-// Notify form — replace with your real endpoint (Mailchimp / WP / Formspree)
-document.getElementById('notify').addEventListener('submit', function(e){
-  e.preventDefault();
-  const btn = this.querySelector('button');
-  if(!this.email.value.includes('@')){ this.email.focus(); return; }
-  btn.textContent = 'Added — check your inbox';
-  btn.disabled = true;
-});
